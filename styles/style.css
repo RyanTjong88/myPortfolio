@@ -1,0 +1,617 @@
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+figcaption, figure, main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: .35em .75em .625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox], [type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details, menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html,
+body,
+section,
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+ul,
+li,
+form,
+select,
+button {
+  padding: 0;
+  margin: 0;
+  color: #05182a;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+select {
+  border: none;
+  background: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.wrapperTwo {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.border {
+  border: 2px solid #000;
+  border-top: none;
+  border-bottom: none;
+  height: 100%;
+}
+
+h3 {
+  font: 100 7rem "Noto Sans JP", sans-serif;
+  position: relative;
+  z-index: 10;
+}
+
+h3::before {
+  content: '';
+  background-color: #6cb5ff;
+  opacity: .3;
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  bottom: 9%;
+  left: 4%;
+  z-index: -10;
+}
+
+header {
+  height: 85vh;
+}
+
+header .nav {
+  background-color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+header .nav .logo {
+  width: 80px;
+  height: 60px;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header ul a {
+  font: 300 1.8rem "Noto Sans JP", sans-serif;
+  margin: 0 10px;
+  padding: 0 10px;
+}
+
+header ul .contact a {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+header .design {
+  height: 70px;
+  border: 2px solid black;
+  border-bottom: none;
+  position: relative;
+}
+
+header .design .borderAccent {
+  background-color: #4141fa;
+  width: 25px;
+  height: 60px;
+  position: absolute;
+  bottom: 20px;
+  left: 17.8%;
+}
+
+header section {
+  background-color: #a3d1ff;
+  height: 85%;
+}
+
+header section .border {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+header section .headerCont h1 {
+  font: 100 4rem "Noto Sans JP", sans-serif;
+}
+
+header section .headerCont h1 span {
+  font-weight: 700;
+}
+
+header section .headerCont h2 {
+  color: #FFF;
+  font: 700 8rem "Noto Sans JP", sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 100;
+}
+
+header section .headerCont .reflection {
+  color: #000;
+  position: relative;
+  z-index: 1;
+  top: -63px;
+  left: 45px;
+  height: 0px;
+  letter-spacing: 11px;
+  -webkit-transform: rotateX(180deg) skewX(49deg) scaleY(-0.4);
+          transform: rotateX(180deg) skewX(49deg) scaleY(-0.4);
+}
+
+header section .headerCont p {
+  font: 300 4rem "Noto Sans JP", sans-serif;
+  letter-spacing: 2px;
+}
+
+header section .headerCont img {
+  background-color: none;
+  width: 15%;
+}
+
+.about {
+  padding: 150px 0 150px;
+}
+
+.about .wrapperTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about .wrapperTwo div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+}
+
+.about .wrapperTwo div :nth-child(2) {
+  font: 700 2.2rem "Noto Sans JP", sans-serif;
+  margin: 40px 0 20px;
+}
+
+.about .wrapperTwo div :nth-child(3) {
+  font: 100 1.8rem "Noto Sans JP", sans-serif;
+  line-height: 3rem;
+  letter-spacing: 1px;
+}
+
+.about .wrapperTwo .imgCont {
+  width: 30%;
+}
+
+.about .wrapperTwo .imgCont img {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out all;
+  transition: .3s ease-in-out all;
+  cursor: crosshair;
+}
+
+.about .wrapperTwo .imgCont img:hover, .about .wrapperTwo .imgCont img:focus {
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.skills .background {
+  background-color: #a3d1ff;
+  height: 350px;
+}
+
+.skills .background div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: right;
+}
+
+.skills .background h3::before {
+  background-color: #FFF;
+  opacity: 1;
+  width: 50%;
+  left: 48%;
+}
+
+.skills .icons .iconCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  bottom: 84px;
+  padding-bottom: 30px;
+}
+
+.skills .icons .iconCont div {
+  text-align: center;
+  padding-top: 50px;
+  width: 25%;
+  min-width: 100px;
+}
+
+.skills .icons .iconCont div i {
+  font-size: 8rem;
+  width: 100%;
+  cursor: crosshair;
+}
+
+.skills .icons .iconCont div i:hover, .skills .icons .iconCont div i:focus {
+  display: inline-block;
+  margin: 0 0.5rem;
+  -webkit-animation: shakeX;
+          animation: shakeX;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.skills .icons .iconCont div p {
+  font: 300 1.8rem "Noto Sans JP", sans-serif;
+  padding-top: 20px;
+  letter-spacing: 2px;
+}
+
+.projectCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 150px;
+}
+
+.projectCont h3 {
+  width: 75%;
+  margin-bottom: 100px;
+}
+
+.projectCont div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid #000;
+  width: 47%;
+  padding: 30px;
+  margin-bottom: 100px;
+  -webkit-animation: fadeInRight;
+          animation: fadeInRight;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.projectCont div h4 {
+  font: 300 2.2rem "Noto Sans JP", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.projectCont div p {
+  font: 100 1.8rem "Noto Sans JP", sans-serif;
+  width: 70%;
+}
+
+.projectCont .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-animation: fadeInLeft;
+          animation: fadeInLeft;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}

@@ -1,0 +1,158 @@
+// ABOUT SECTION
+.about {
+    padding: 150px 0 150px;
+
+    .wrapperTwo {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 50%;
+
+            :nth-child(2) {
+                font: 700 2.2rem $primaryFont;
+                margin: 40px 0 20px;
+            }
+
+            :nth-child(3) {
+                font: 100 1.8rem $primaryFont;
+                line-height: 3rem;
+                letter-spacing: 1px;
+
+            }
+        }
+    
+        .imgCont {
+            width: 30%;
+    
+            img {
+                box-shadow: none;
+                
+                filter: grayscale(100%);
+                transition: .3s ease-in-out all;
+                cursor: crosshair;
+    
+                &:hover,
+                &:focus {
+                    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+                    filter: grayscale(0);
+                }
+            }
+        }
+    }
+}
+
+// SKILLS SECTION
+.skills {
+    
+    .background {
+        background-color: $secondaryBackgroundColor;
+        height: 350px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: right;
+
+        }
+        
+        h3::before {
+            background-color: #FFF;
+            opacity: 1;
+            width: 50%;
+            left: 48%;
+        }
+    }
+
+// ICONS SECTION
+    .icons {
+
+        .iconCont {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            position: relative;
+            bottom: 84px;
+            padding-bottom: 30px;
+
+            div {
+                text-align: center;
+
+                padding-top: 50px;
+                width: 25%;
+                min-width: 100px;
+
+                i {
+                    font-size: 8rem;
+                    width: 100%;
+                    cursor: crosshair;
+
+                    &:hover,
+                    &:focus {
+                    display: inline-block;
+                    margin: 0 0.5rem;
+
+                    animation: shakeX;
+                    animation-duration: 2s;
+                    }
+                }
+
+                p {
+                    font: 300 1.8rem $primaryFont;
+                    padding-top: 20px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}
+
+// PROJECT SECTION
+.projectCont {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 150px;
+
+    h3 {
+        width: 75%;
+        margin-bottom: 100px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #000;
+
+        width: 47%;
+        padding: 30px;
+        margin-bottom: 100px;
+
+        animation: fadeInRight;
+        animation-duration: 2s;
+
+        h4 {
+            font: 300 2.2rem $primaryFont;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        p  {
+            font: 100 1.8rem $primaryFont;
+            width: 70%;
+        }
+    }
+
+    .projects {
+        display: flex;
+        align-self: flex-end;
+        align-items: flex-end;
+
+        animation: fadeInLeft;
+        animation-duration: 2s;
+    }
+}

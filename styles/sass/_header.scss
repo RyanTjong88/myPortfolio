@@ -1,0 +1,116 @@
+header {
+    height: 85vh;
+
+// NAVIGATION
+    .nav {
+        // position: fixed;
+        background-color: #FFF;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        margin-bottom: 20px; 
+        
+        // position: fixed;
+        
+        .logo {
+            width: 80px;
+            height: 60px;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+    
+        a {
+            font: 300 1.8rem $primaryFont;
+            margin: 0 10px;
+            padding: 0 10px;
+        }
+    
+        .contact {
+            a {
+                margin-right: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    
+    // HEADER CONTENT
+    .design {
+        height: 70px;
+        border: 2px solid black;
+        border-bottom: none;
+
+        position: relative;
+
+        .borderAccent {
+            background-color: $accentColor;
+
+            width: 25px;
+            height: 60px;
+
+            position: absolute;
+            bottom: 20px;
+            left: 17.8%;
+        }
+    }
+
+    section {
+        background-color: $secondaryBackgroundColor;
+
+        height: 85%;
+
+        .border {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .headerCont {
+
+            h1 {
+                font: 100 4rem $primaryFont;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            h2 {
+                color: #FFF;
+                font: 700 8rem $primaryFont;
+                letter-spacing: 2px;
+
+                position: relative;
+                z-index: 100;
+            }
+            
+            .reflection {
+                color: #000;
+
+                position: relative;
+                z-index: 1;
+                top: -63px;
+                left: 45px;
+                height: 0px;
+                letter-spacing: 11px;
+                
+                transform: rotateX(180deg) skewX(49deg) scaleY(-0.4);
+            }
+
+            p {
+                font: 300 4rem $primaryFont;
+                letter-spacing: 2px;
+            }
+
+            img {
+                background-color: none;
+                width: 15%;
+            }
+        }
+    }
+}
+
