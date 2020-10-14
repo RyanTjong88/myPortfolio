@@ -488,12 +488,14 @@ header section .headerCont img {
           filter: grayscale(0);
 }
 
-.skills .background {
+.skills .background,
+.contact .background {
   background-color: #a3d1ff;
   height: 350px;
 }
 
-.skills .background div {
+.skills .background div,
+.contact .background div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -507,14 +509,16 @@ header section .headerCont img {
   text-align: right;
 }
 
-.skills .background h3::before {
+.skills .background h3::before,
+.contact .background h3::before {
   background-color: #FFF;
   opacity: 1;
   width: 50%;
   left: 48%;
 }
 
-.skills .icons .iconCont {
+.skills .icons .iconCont,
+.contact .icons .iconCont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -528,20 +532,24 @@ header section .headerCont img {
   padding-bottom: 30px;
 }
 
-.skills .icons .iconCont div {
+.skills .icons .iconCont div,
+.contact .icons .iconCont div {
   text-align: center;
   padding-top: 50px;
   width: 25%;
   min-width: 100px;
 }
 
-.skills .icons .iconCont div i {
+.skills .icons .iconCont div i,
+.contact .icons .iconCont div i {
   font-size: 8rem;
   width: 100%;
   cursor: crosshair;
 }
 
-.skills .icons .iconCont div i:hover, .skills .icons .iconCont div i:focus {
+.skills .icons .iconCont div i:hover, .skills .icons .iconCont div i:focus,
+.contact .icons .iconCont div i:hover,
+.contact .icons .iconCont div i:focus {
   display: inline-block;
   margin: 0 0.5rem;
   -webkit-animation: shakeX;
@@ -550,7 +558,8 @@ header section .headerCont img {
           animation-duration: 2s;
 }
 
-.skills .icons .iconCont div p {
+.skills .icons .iconCont div p,
+.contact .icons .iconCont div p {
   font: 300 1.8rem "Noto Sans JP", sans-serif;
   padding-top: 20px;
   letter-spacing: 2px;
@@ -564,7 +573,7 @@ header section .headerCont img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 }
 
 .projectCont h3 {
@@ -581,6 +590,8 @@ header section .headerCont img {
       -ms-flex-direction: column;
           flex-direction: column;
   border: 2px solid #000;
+  -webkit-box-shadow: rgba(65, 65, 250, 0.5) -5px 5px;
+          box-shadow: rgba(65, 65, 250, 0.5) -5px 5px;
   width: 47%;
   padding: 30px;
   margin-bottom: 100px;
@@ -594,6 +605,10 @@ header section .headerCont img {
   font: 300 2.2rem "Noto Sans JP", sans-serif;
   text-transform: uppercase;
   letter-spacing: 4px;
+}
+
+.projectCont div img {
+  width: 50%;
 }
 
 .projectCont div p {
@@ -610,8 +625,15 @@ header section .headerCont img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-shadow: rgba(65, 65, 250, 0.5) 5px 5px;
+          box-shadow: rgba(65, 65, 250, 0.5) 5px 5px;
   -webkit-animation: fadeInLeft;
           animation: fadeInLeft;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+}
+
+.form.border {
+  border-bottom: 2px solid #000;
+  padding: 150px 0;
 }
