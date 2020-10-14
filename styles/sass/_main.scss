@@ -127,7 +127,7 @@
         display: flex;
         flex-direction: column;
         border: 2px solid #000;
-        box-shadow: rgba(65, 65, 250, 0.5) -5px 5px;
+        box-shadow: rgba(65, 65, 250, 0.5) -10px 10px;
 
         width: 47%;
         padding: 30px;
@@ -156,7 +156,7 @@
         display: flex;
         align-self: flex-end;
         align-items: flex-end;
-        box-shadow: rgba(65, 65, 250, 0.5) 5px 5px;
+        box-shadow: rgba(65, 65, 250, 0.5) 10px 10px;
 
         animation: fadeInLeft;
         animation-duration: 2s;
@@ -164,8 +164,72 @@
 }
 
 // CONTACT SECTION
+.contactCont.border {
+    // display: flex;
+    // justify-content: center;
 
-.form.border {
-    border-bottom: 2px solid #000;
-    padding: 150px 0;
+    .fuck {
+        font: 300 2.2rem $primaryFont;
+        text-align: center;
+    }
+    
+    .contactIcons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        i {
+            font-size: 5rem;
+            width: 100%;
+            padding: 20px;
+            cursor: pointer;
+    
+            &:hover,
+            &:focus {
+            display: inline-block;
+            margin: 0 0.5rem;
+    
+            animation: shakeX;
+            animation-duration: 2s;
+            }
+        }
+    }
+}
+
+.form {
+    height: 70px;
+    border: 2px solid black;
+    border-top: none;
+}
+
+
+// FOOTER
+
+footer {
+    text-align: center;
+    height: 50px;
+    margin: 50px 0;
+
+    p {
+        font: 700 3rem $primaryFont;
+        position: relative;
+        z-index: 10;
+
+        &::before {
+            content: '';
+            background-color: $heading;
+            opacity: .3;
+            width: 36%;
+            height: 50%;
+            position: absolute;
+            bottom: 44%;
+            left: 32%;
+            z-index: -10;
+        }
+    }
+
+    img {
+        min-width: 100px;
+        width: 8%;
+    }
 }

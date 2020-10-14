@@ -301,6 +301,8 @@ h3 {
   font: 100 7rem "Noto Sans JP", sans-serif;
   position: relative;
   z-index: 10;
+  -webkit-transition: .3s ease-in-out all;
+  transition: .3s ease-in-out all;
 }
 
 h3::before {
@@ -313,6 +315,10 @@ h3::before {
   bottom: 9%;
   left: 4%;
   z-index: -10;
+}
+
+h3:hover, h3:focus {
+  cursor: crosshair;
 }
 
 header {
@@ -590,8 +596,8 @@ header section .headerCont img {
       -ms-flex-direction: column;
           flex-direction: column;
   border: 2px solid #000;
-  -webkit-box-shadow: rgba(65, 65, 250, 0.5) -5px 5px;
-          box-shadow: rgba(65, 65, 250, 0.5) -5px 5px;
+  -webkit-box-shadow: rgba(65, 65, 250, 0.5) -10px 10px;
+          box-shadow: rgba(65, 65, 250, 0.5) -10px 10px;
   width: 47%;
   padding: 30px;
   margin-bottom: 100px;
@@ -625,15 +631,78 @@ header section .headerCont img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-box-shadow: rgba(65, 65, 250, 0.5) 5px 5px;
-          box-shadow: rgba(65, 65, 250, 0.5) 5px 5px;
+  -webkit-box-shadow: rgba(65, 65, 250, 0.5) 10px 10px;
+          box-shadow: rgba(65, 65, 250, 0.5) 10px 10px;
   -webkit-animation: fadeInLeft;
           animation: fadeInLeft;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
 }
 
-.form.border {
-  border-bottom: 2px solid #000;
-  padding: 150px 0;
+.contactCont.border .fuck {
+  font: 300 2.2rem "Noto Sans JP", sans-serif;
+  text-align: center;
+}
+
+.contactCont.border .contactIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contactCont.border .contactIcons i {
+  font-size: 5rem;
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.contactCont.border .contactIcons i:hover, .contactCont.border .contactIcons i:focus {
+  display: inline-block;
+  margin: 0 0.5rem;
+  -webkit-animation: shakeX;
+          animation: shakeX;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.form {
+  height: 70px;
+  border: 2px solid black;
+  border-top: none;
+}
+
+footer {
+  text-align: center;
+  height: 50px;
+  margin: 50px 0;
+}
+
+footer p {
+  font: 700 3rem "Noto Sans JP", sans-serif;
+  position: relative;
+  z-index: 10;
+}
+
+footer p::before {
+  content: '';
+  background-color: #6cb5ff;
+  opacity: .3;
+  width: 36%;
+  height: 50%;
+  position: absolute;
+  bottom: 44%;
+  left: 32%;
+  z-index: -10;
+}
+
+footer img {
+  min-width: 100px;
+  width: 8%;
 }

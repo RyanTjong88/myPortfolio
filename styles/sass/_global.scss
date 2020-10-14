@@ -1,14 +1,14 @@
 //VARIABLE DECLARATIONS
 
 //COLORS
-$bodySecondaryBackgroundColor: black;
+// $bodySecondaryBackgroundColor: black;
 $secondaryBackgroundColor:  rgb(163, 209, 255);
 $heading: #6cb5ff;
-$accentColor: rgb(65, 65, 250);
+$accentColor: #4141fa;
 $fontColor: #05182a;
-$buttonColor: #0000E0;
-$buttonHoverColor: #1e90ff;
-$footerColor:  #0000E0;
+// $buttonColor: #0000E0;
+// $buttonHoverColor: #1e90ff;
+$footerColor:  #6cb5ff;
 
 //FONTS
 $primaryFont: 'Noto Sans JP', sans-serif;
@@ -82,6 +82,8 @@ h3 {
     position: relative;
     z-index: 10;
     
+    transition: .3s ease-in-out all;
+    
     &::before {
         content: '';
         background-color: $heading;
@@ -92,5 +94,10 @@ h3 {
         bottom: 9%;
         left: 4%;
         z-index: -10;
+    }
+
+    &:hover,
+    &:focus {
+        cursor: crosshair;
     }
 }
