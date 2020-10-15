@@ -372,6 +372,7 @@ header .design {
 
 header .design .borderAccent {
   background-color: #4141fa;
+  border: 2px solid #000;
   width: 25px;
   height: 60px;
   position: absolute;
@@ -407,23 +408,26 @@ header section .headerCont h1 span {
 }
 
 header section .headerCont h2 {
-  color: #FFF;
+  color: #000;
   font: 700 8rem "Noto Sans JP", sans-serif;
   letter-spacing: 2px;
   position: relative;
   z-index: 100;
 }
 
-header section .headerCont .reflection {
-  color: #000;
-  position: relative;
-  z-index: 1;
-  top: -63px;
-  left: 45px;
-  height: 0px;
-  letter-spacing: 11px;
-  -webkit-transform: rotateX(180deg) skewX(49deg) scaleY(-0.4);
-          transform: rotateX(180deg) skewX(49deg) scaleY(-0.4);
+header section .headerCont h2::before {
+  content: '';
+  background-color: #FFF;
+  width: 60%;
+  height: 25%;
+  position: absolute;
+  bottom: 9%;
+  left: 4%;
+  z-index: -10;
+}
+
+header section .headerCont h2 span {
+  font-size: 6rem;
 }
 
 header section .headerCont p {
@@ -459,7 +463,7 @@ header section .headerCont img {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 50%;
+  width: 60%;
 }
 
 .about .wrapperTwo div :nth-child(2) {
@@ -467,10 +471,12 @@ header section .headerCont img {
   margin: 40px 0 20px;
 }
 
-.about .wrapperTwo div :nth-child(3) {
-  font: 100 1.8rem "Noto Sans JP", sans-serif;
+.about .wrapperTwo div :nth-child(3),
+.about .wrapperTwo div :nth-child(4) {
+  font: 300 1.8rem "Noto Sans JP", sans-serif;
   line-height: 3rem;
   letter-spacing: 1px;
+  padding-bottom: 10px;
 }
 
 .about .wrapperTwo .imgCont {
@@ -538,24 +544,24 @@ header section .headerCont img {
   padding-bottom: 30px;
 }
 
-.skills .icons .iconCont div,
-.contact .icons .iconCont div {
+.skills .icons .iconCont li,
+.contact .icons .iconCont li {
   text-align: center;
   padding-top: 50px;
   width: 25%;
   min-width: 100px;
 }
 
-.skills .icons .iconCont div i,
-.contact .icons .iconCont div i {
+.skills .icons .iconCont li i,
+.contact .icons .iconCont li i {
   font-size: 8rem;
   width: 100%;
   cursor: crosshair;
 }
 
-.skills .icons .iconCont div i:hover, .skills .icons .iconCont div i:focus,
-.contact .icons .iconCont div i:hover,
-.contact .icons .iconCont div i:focus {
+.skills .icons .iconCont li i:hover, .skills .icons .iconCont li i:focus,
+.contact .icons .iconCont li i:hover,
+.contact .icons .iconCont li i:focus {
   display: inline-block;
   margin: 0 0.5rem;
   -webkit-animation: shakeX;
@@ -564,8 +570,8 @@ header section .headerCont img {
           animation-duration: 2s;
 }
 
-.skills .icons .iconCont div p,
-.contact .icons .iconCont div p {
+.skills .icons .iconCont li p,
+.contact .icons .iconCont li p {
   font: 300 1.8rem "Noto Sans JP", sans-serif;
   padding-top: 20px;
   letter-spacing: 2px;
@@ -596,8 +602,8 @@ header section .headerCont img {
       -ms-flex-direction: column;
           flex-direction: column;
   border: 2px solid #000;
-  -webkit-box-shadow: rgba(65, 65, 250, 0.5) -10px 10px;
-          box-shadow: rgba(65, 65, 250, 0.5) -10px 10px;
+  -webkit-box-shadow: #4141fa -10px 10px;
+          box-shadow: #4141fa -10px 10px;
   width: 47%;
   padding: 30px;
   margin-bottom: 100px;
@@ -631,8 +637,8 @@ header section .headerCont img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-box-shadow: rgba(65, 65, 250, 0.5) 10px 10px;
-          box-shadow: rgba(65, 65, 250, 0.5) 10px 10px;
+  -webkit-box-shadow: #4141fa 10px 10px;
+          box-shadow: #4141fa 10px 10px;
   -webkit-animation: fadeInLeft;
           animation: fadeInLeft;
   -webkit-animation-duration: 2s;
