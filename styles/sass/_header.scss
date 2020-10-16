@@ -1,18 +1,29 @@
 header {
+    min-height: 670px;
     height: 85vh;
     margin-top: 15px;
 
+// HAMBURGER MENU
+
+.hamburger {
+    // display: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    i {
+        font-size: 4rem;
+    }
+}
+
 // NAVIGATION
     .nav {
-        // position: fixed;
         background-color: #FFF;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         margin-bottom: 20px; 
-        
-        // position: fixed;
         
         .logo {
             width: 80px;
@@ -28,6 +39,7 @@ header {
             display: inline-block;
             font: 300 1.8rem $primaryFont;
             letter-spacing: 2px;
+            cursor: pointer;
 
             position: relative;
             margin: 0 10px;
@@ -89,8 +101,10 @@ header {
 
         .headerCont {
             display: flex;
+            flex-wrap: wrap;
 
             div {
+                min-width: 250px;
                 width: 50%;
 
                 .profilePicTwo {
@@ -127,6 +141,7 @@ header {
                     content: '';
                     background-color: #FFF;
                     width: 60%;
+                    max-height: 29px;
                     height: 25%;
                     position: absolute;
                     bottom: 9%;

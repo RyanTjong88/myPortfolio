@@ -20,6 +20,8 @@
     <!-- ANIMATE -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+    <link rel="stylesheet" href="/path/to/animate.min.css">
+
     <!-- STYLE SHEET -->
     <link rel="stylesheet" href="styles/style.css">
 
@@ -34,15 +36,24 @@
         
                 <nav>
                     <ul>
-                        <li class="aboutMe"><a href="">about me</a></li>
-                        <li class="skills"><a href="">skills</a></li>
-                        <li class="portfolio"><a href="">portfolio</a></li>
-                        <li class="contact"><a href="">contact</a></li>
+                        <li><a id="aboutMe" href="#">about me</a></li>
+                        <li><a id="skills" href="#">skills</a></li>
+                        <li><a id="portfolio" href="#">portfolio</a></li>
+                        <li><a id="contact" href="#">contact</a></li>
                     </ul>
                 </nav>
     
                 <!-- <div class="hamburger">
-                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-bars">
+                        <nav>
+                            <ul>
+                                <li><a id="aboutMe" href="#">about me</a></li>
+                                <li><a id="skills" href="#">skills</a></li>
+                                <li><a id="portfolio" href="#">portfolio</a></li>
+                                <li><a id="contact" href="#">contact</a></li>
+                            </ul>
+                        </nav>
+                    </i>
                 </div> -->
             </div>
         </div>
@@ -71,7 +82,7 @@
 
     <main>
         <!-- ABOUT ME SECTION -->
-        <section class="wrapper about border">
+        <section class="wrapper about border" id="about">
             <div class="wrapperTwo">
                 <div>
                     <h3>about me</h3>
@@ -88,12 +99,10 @@
         </section>
 
         <!-- SKILLS SECTION -->
-        <section class="skills">
+        <section class="skills" id="skillsSec">
             <div class="background">
                 <div class="wrapper border">
-                    <!-- <div class="wrapperTwo"> -->
-                        <h3 class="wrapperTwo">skills</h3>
-                    <!-- </div> -->
+                    <h3 class="wrapperTwo">skills</h3>
                 </div>
             </div>
             
@@ -124,8 +133,8 @@
                         <p>React</p>
                     </li>
                     <li>
-                        <i class="fab fa-git-alt"></i>
-                        <p>Git</p>
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>Responsive Design</p>
                     </li>
                     <li>
                         <i class="fab fa-github"></i>
@@ -136,81 +145,80 @@
                         <p>Firebase</p>
                     </li>
                     <li>
-                        <i class="fas fa-mobile-alt"></i>
-                        <p>Responsive Design</p>
+                        <i class="fas fa-universal-access"></i>
+                        <p>Accessibility</p>
+                    </li>
+                    <li>
+                        <i class="fab fa-git-alt"></i>
+                        <p>Git</p>
                     </li>
                     <li>
                         <i class="fas fa-sitemap"></i>
                         <p>Rest API's</p>
-                    </li>
-                    <li>
-                        <i class="fas fa-universal-access"></i>
-                        <p>Accessibility</p>
                     </li>
                 </ul>
             </div>
         </section>
 
         <!-- PROJECTS SECTION -->
-        <section class="wrapper border">
+        <section class="wrapper border" id="portfolioSec">
             <div class="wrapperTwo projectCont">
                 <h3>my creations</h3>
     
-                <div class="projects">
+                <div id="animateOne" class="projects">
                     <h4>juno fitness</h4>
                     <img src="./styles/assets/linesProjectReverse.png" alt="image with three lines">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dicta molestias nostrum impedit, blanditiis architecto nam cupiditate id. Nisi, adipisci.</p>
-                    <p>
-                        <a href="https://ryantjong88.github.io/junoFitness/">live link</a>
-                        ~
-                        <a href="https://github.com/RyanTjong88/junoFitness">git hub</a>
+                    <p>Workout app to help you decide on a muscle group to train and what exercises you can do for it.</p>
+                    <p class="links">
+                        { <a href="https://ryantjong88.github.io/junoFitness/">live link</a>
+                        /
+                        <a href="https://github.com/RyanTjong88/junoFitness">git hub</a> }
                     </p>
                     <img class="mockUpOneA" src="./styles/assets/junoFitnessMockUp.png" alt="screenshot of project">
                     <img class="mockUpOneB" src="./styles/assets/junoFitnessBrowserMockUp.png" alt="screenshot of project">
                 </div>
     
-                <div>
+                <div id="animateTwo">
                     <h4>code countdown</h4>
                     <img src="./styles/assets/linesProject.png" alt="image with three lines">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dicta molestias nostrum impedit, blanditiis architecto nam cupiditate id. Nisi, adipisci.</p>
-                    <p>
-                        <a href="https://ryantjong88.github.io/codeCountdown/">live link</a>
-                        ~
-                        <a href="https://github.com/RyanTjong88/codeCountdown">git hub</a>
+                    <p>Need a break!? This app is perfect for that. Select a break time and the type of mood your in to display a wide variety of quotes to lighten up your day.</p>
+                    <p class="links">
+                        { <a href="https://ryantjong88.github.io/codeCountdown/">live link</a>
+                        /
+                        <a href="https://github.com/RyanTjong88/codeCountdown">git hub</a> }
                     </p>
                     <img class="mockUpTwo" src="./styles/assets/codeCountdownMockUp.png" alt="screenshot of project">
                 </div>
                 
-                <div class="projects">
+                <div id="animateOne" class="projects">
                     <h4>holiday planner</h4>
                     <img src="./styles/assets/linesProjectReverse.png" alt="image with three lines">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dicta molestias nostrum impedit, blanditiis architecto nam cupiditate id. Nisi, adipisci.</p>
-                    <p>
-                        <a href="https://ryantjong88.github.io/holidayPlanner/">live link</a>
-                        ~
-                        <a href="https://github.com/RyanTjong88/holidayPlanner">git hub</a>
+                    <p>Holiday Planner is a fantastic way to create plans for any upcoming holiday and save those exciting ideas for further reference.</p>
+                    <p class="links">
+                        { <a href="https://ryantjong88.github.io/holidayPlanner/">live link</a>
+                        /
+                        <a href="https://github.com/RyanTjong88/holidayPlanner">git hub</a> }
                     </p>
                     <img class="mockUpThree" src="./styles/assets/holidayPlannerMockUp.png" alt="screenshot of project">
                 </div>
     
-                <div>
+                <div id="animateTwo">
                     <h4>guess the lyric</h4>
                     <img src="./styles/assets/linesProject.png" alt="image with three lines">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dicta molestias nostrum impedit, blanditiis architecto nam cupiditate id. Nisi, adipisci.</p>
-                    <p>
-                        <a href="https://ryantjong88.github.io/guessTheLyrics/">live link</a>
-                        ~
-                        <a href="https://github.com/RyanTjong88/guessTheLyrics">git hub</a>
+                    <p>This game will help you remember all the lyrics to your favorite songs. Start by entering an artist and song then enter the correct word that is missing from the lyrics. This app allows you to save any song lyrics you wish to play again.</p>
+                    <p class="links">
+                        { <a href="https://ryantjong88.github.io/guessTheLyrics/">live link</a>
+                        /
+                        <a href="https://github.com/RyanTjong88/guessTheLyrics">git hub</a> }
                     </p>
-                    <img class="mockUpFourA" src="./styles/assets/guessTheLyricMockUp.png" alt="screenshot of project">
+                    <img class="mockUpFour" src="./styles/assets/guessTheLyricMockUp.png" alt="screenshot of project">
 
-                    <img class="mockUpFourB" src="./styles/assets/guessTheLyricMobileMockUp.png" alt="screenshot of project">
                 </div>
             </div>
         </section>
 
         <!-- CONTACT SECTION -->
-        <section class="contact">
+        <section class="contact" id="contactSec">
             <div class="background">
                 <div class="wrapper contactCont border">
                     <h3 class="wrapperTwo">get in touch</h3>
@@ -219,7 +227,7 @@
                         <a href="mailto:name@email.com "><p>ryan.tjong888@gmail.com</p></a>
                     </div>
 
-                    <div class="contactIcons wrapperTwo">
+                    <div class="contactIcons">
                         <a href="https://www.linkedin.com/in/ryan-tjong-3614251b5/"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/RyanTjong88"><i class="fab fa-github-square"></i></a>
                         <a href="https://twitter.com/RyanTjong88"><i class="fab fa-twitter-square"></i></a>
@@ -239,6 +247,9 @@
         <p>Designed & Created by Ryan Tjong</p>
         <a href="index.html"><img src="./styles/assets/logo.png" alt="logo with letter R and T"></a>
     </footer>
+
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="script.js"></script>
 
 </body>
 </html>

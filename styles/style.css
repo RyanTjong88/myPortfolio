@@ -310,6 +310,7 @@ h3::before {
   background-color: #6cb5ff;
   opacity: .3;
   width: 100%;
+  max-height: 29px;
   height: 25%;
   position: absolute;
   bottom: 9%;
@@ -322,8 +323,19 @@ h3:hover, h3:focus {
 }
 
 header {
+  min-height: 670px;
   height: 85vh;
   margin-top: 15px;
+}
+
+header .hamburger {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+header .hamburger i {
+  font-size: 4rem;
 }
 
 header .nav {
@@ -358,6 +370,7 @@ header ul a {
   display: inline-block;
   font: 300 1.8rem "Noto Sans JP", sans-serif;
   letter-spacing: 2px;
+  cursor: pointer;
   position: relative;
   margin: 0 10px;
   padding: 0 10px 10px;
@@ -424,9 +437,12 @@ header section .headerCont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 header section .headerCont div {
+  min-width: 250px;
   width: 50%;
 }
 
@@ -466,6 +482,7 @@ header section .headerCont h2::before {
   content: '';
   background-color: #FFF;
   width: 60%;
+  max-height: 29px;
   height: 25%;
   position: absolute;
   bottom: 9%;
@@ -498,6 +515,8 @@ header section .headerCont img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .about .wrapperTwo div {
@@ -527,6 +546,7 @@ header section .headerCont img {
 }
 
 .about .wrapperTwo .imgCont {
+  min-width: 270px;
   width: 35%;
 }
 
@@ -596,7 +616,7 @@ header section .headerCont img {
   text-align: center;
   padding-top: 50px;
   width: 25%;
-  min-width: 100px;
+  min-width: 150px;
 }
 
 .skills .icons .iconCont li i,
@@ -623,6 +643,20 @@ header section .headerCont img {
   font: 300 1.8rem "Noto Sans JP", sans-serif;
   padding-top: 20px;
   letter-spacing: 2px;
+}
+
+.animateOne {
+  -webkit-animation: fadeInLeft;
+          animation: fadeInLeft;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.animateTwo {
+  -webkit-animation: fadeInRight;
+          animation: fadeInRight;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .projectCont {
@@ -655,10 +689,6 @@ header section .headerCont img {
   width: 60%;
   padding: 30px;
   margin-bottom: 200px;
-  -webkit-animation: fadeInRight;
-          animation: fadeInRight;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
   position: relative;
 }
 
@@ -677,6 +707,11 @@ header section .headerCont img {
   width: 77%;
 }
 
+.projectCont div .links {
+  font-weight: 700;
+  padding-top: 20px;
+}
+
 .projectCont div .mockUpTwo {
   position: absolute;
   width: 80%;
@@ -684,18 +719,11 @@ header section .headerCont img {
   left: 80%;
 }
 
-.projectCont div .mockUpFourA {
+.projectCont div .mockUpFour {
   position: absolute;
   width: 290px;
   top: 40px;
-  left: 82%;
-}
-
-.projectCont div .mockUpFourB {
-  position: absolute;
-  width: 155px;
-  top: 101px;
-  left: 140%;
+  left: 90%;
 }
 
 .projectCont .projects {
@@ -709,11 +737,15 @@ header section .headerCont img {
           align-items: flex-end;
   -webkit-box-shadow: #4141fa 10px 10px;
           box-shadow: #4141fa 10px 10px;
+  position: relative;
   -webkit-animation: fadeInLeft;
           animation: fadeInLeft;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  position: relative;
+}
+
+.projectCont .projects .links {
+  text-align: end;
 }
 
 .projectCont .projects .mockUpOneA {
@@ -744,7 +776,16 @@ header section .headerCont img {
 }
 
 .contactCont.border .emailCont {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
+}
+
+.contactCont.border .emailCont a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .contactCont.border .emailCont a p {
@@ -762,6 +803,7 @@ header section .headerCont img {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  text-align: start;
 }
 
 .contactCont.border .contactIcons i {
@@ -769,6 +811,7 @@ header section .headerCont img {
   color: #141c24;
   text-shadow: #FFF 5px 5px;
   width: 100%;
+  margin: 0 10px;
   padding: 20px;
   cursor: pointer;
 }
@@ -795,7 +838,7 @@ footer {
 }
 
 footer p {
-  font: 700 3rem "Noto Sans JP", sans-serif;
+  font: 300 3rem "Noto Sans JP", sans-serif;
   position: relative;
   z-index: 10;
 }
@@ -815,4 +858,130 @@ footer p::before {
 footer img {
   min-width: 100px;
   width: 8%;
+}
+
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .headerCont {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .headerCont div {
+    text-align: center;
+  }
+  .about {
+    padding: 100px 0 100px;
+  }
+  .about .wrapperTwo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about .wrapperTwo div {
+    width: 100%;
+  }
+  .about .wrapperTwo .imgCont img {
+    margin-top: 40px;
+  }
+  .mockUpOneB {
+    display: none;
+  }
+  .projectCont div,
+  .projectCont .projects {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  .projectCont div h4,
+  .projectCont div p,
+  .projectCont .projects h4,
+  .projectCont .projects p {
+    width: 100%;
+  }
+  .projectCont div .mockUpOneA,
+  .projectCont div .mockUpTwo,
+  .projectCont div .mockUpThree,
+  .projectCont div .mockUpFour,
+  .projectCont .projects .mockUpOneA,
+  .projectCont .projects .mockUpTwo,
+  .projectCont .projects .mockUpThree,
+  .projectCont .projects .mockUpFour {
+    position: initial;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .projectCont div .mockUpOneA,
+  .projectCont div .mockUpFour,
+  .projectCont .projects .mockUpOneA,
+  .projectCont .projects .mockUpFour {
+    position: initial;
+    width: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  header section .headerCont h1,
+  header section .headerCont p {
+    font-size: 3rem;
+  }
+  header section .headerCont h2 {
+    font-size: 4.2rem;
+  }
+  header section .headerCont h2 span {
+    font-size: 3.2rem;
+  }
+  .skills .icons .iconCont li i {
+    font-size: 5rem;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  h3 {
+    font-size: 5rem;
+  }
+  .about .wrapperTwo div {
+    width: 100%;
+  }
+  .skills .background {
+    height: 200px;
+  }
+  .skills .icons .iconCont {
+    padding-bottom: 0;
+  }
+  .skills .icons .iconCont li {
+    min-width: 80px;
+  }
+  .skills .icons .iconCont li p {
+    font-size: 1.3rem;
+  }
+  .contactCont.border .emailCont a p {
+    font-size: 1.8rem;
+  }
+  .contactCont.border .contactIcons i {
+    font-size: 4rem;
+  }
+  .projectCont div .mockUpOneA,
+  .projectCont div .mockUpFour,
+  .projectCont .projects .mockUpOneA,
+  .projectCont .projects .mockUpFour {
+    width: 100%;
+  }
+  footer p {
+    font-size: 1.8rem;
+  }
+  footer p::before {
+    width: 70%;
+    left: 15%;
+  }
 }

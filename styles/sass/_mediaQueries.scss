@@ -1,0 +1,162 @@
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .headerCont {
+        justify-content: center;
+    
+        div {
+            text-align: center;
+        }
+    }
+
+    // ABOUT ME SECTION 
+
+    .about {
+        padding: 100px 0 100px;
+
+        .wrapperTwo {
+            justify-content: center;
+    
+            div {
+                width: 100%;
+            }
+
+            .imgCont {
+                
+                img {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    // PROJECT SECTION
+    .mockUpOneB {
+        display: none;
+    }
+    .projectCont div,
+    .projectCont .projects {
+        width: 100%;
+        margin-bottom: 100px;
+
+        h4,
+        p {
+            width: 100%;
+        }
+
+        .mockUpOneA,
+        .mockUpTwo,
+        .mockUpThree,
+        .mockUpFour {
+            position: initial;
+            width: 100%;
+            margin-top:20px;
+        }
+
+        .mockUpOneA,
+        .mockUpFour {
+            position: initial;
+            width: 50%;
+            align-self: center;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+
+    // HEADER
+    header section .headerCont {
+
+        h1,
+        p {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 4.2rem;
+
+            span {
+                font-size: 3.2rem;
+            }
+        }
+    }
+
+    // SKILlS ICONS
+    .skills .icons .iconCont li {
+        
+        i {
+            font-size: 5rem;
+        }
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    h3 {
+        font-size: 5rem;
+    }
+
+    // ABOUT ME SECTION
+    .about .wrapperTwo div {
+        width: 100%;
+    }
+
+    // SKILlS ICONS
+    .skills .background {
+        height: 200px;
+    }
+
+    .skills .icons .iconCont {
+        padding-bottom: 0;
+
+        li {
+            min-width: 80px;
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    // CONTACT SECTION
+
+    .contactCont.border .emailCont a p {
+        font-size: 1.8rem;
+    }
+
+    .contactCont.border .contactIcons i {
+        font-size: 4rem;
+    }
+
+    // MOCK UP
+    .projectCont div,
+    .projectCont .projects {
+        .mockUpOneA,
+        .mockUpFour {
+            width: 100%;
+        }
+    }
+    // FOOTER
+
+    footer p {
+        font-size: 1.8rem;
+
+        &::before {
+            width: 70%;
+            left: 15%;
+        }
+    }
+}
