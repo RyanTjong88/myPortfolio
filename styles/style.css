@@ -251,7 +251,7 @@ select,
 button {
   padding: 0;
   margin: 0;
-  color: #05182a;
+  color: #141c24;
 }
 
 ul {
@@ -323,6 +323,7 @@ h3:hover, h3:focus {
 
 header {
   height: 85vh;
+  margin-top: 15px;
 }
 
 header .nav {
@@ -330,8 +331,9 @@ header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -353,14 +355,32 @@ header ul {
 }
 
 header ul a {
+  display: inline-block;
   font: 300 1.8rem "Noto Sans JP", sans-serif;
+  letter-spacing: 2px;
+  position: relative;
   margin: 0 10px;
-  padding: 0 10px;
+  padding: 0 10px 10px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
-header ul .contact a {
-  margin-right: 0;
-  padding-right: 0;
+header ul a:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #4141fa;
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+header ul a:hover:after, header ul a:focus:after {
+  width: 100%;
 }
 
 header .design {
@@ -377,11 +397,12 @@ header .design .borderAccent {
   height: 60px;
   position: absolute;
   bottom: 20px;
-  left: 17.8%;
+  left: 17.3%;
 }
 
 header section {
   background-color: #a3d1ff;
+  min-height: 509px;
   height: 85%;
 }
 
@@ -397,6 +418,32 @@ header section .border {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
+}
+
+header section .headerCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header section .headerCont div {
+  width: 50%;
+}
+
+header section .headerCont div .profilePicTwo {
+  width: 75%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out all;
+  transition: .3s ease-in-out all;
+  cursor: crosshair;
+}
+
+header section .headerCont div .profilePicTwo:hover, header section .headerCont div .profilePicTwo:focus {
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 header section .headerCont h1 {
@@ -463,7 +510,7 @@ header section .headerCont img {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 60%;
+  width: 55%;
 }
 
 .about .wrapperTwo div :nth-child(2) {
@@ -480,7 +527,7 @@ header section .headerCont img {
 }
 
 .about .wrapperTwo .imgCont {
-  width: 30%;
+  width: 35%;
 }
 
 .about .wrapperTwo .imgCont img {
@@ -555,6 +602,7 @@ header section .headerCont img {
 .skills .icons .iconCont li i,
 .contact .icons .iconCont li i {
   font-size: 8rem;
+  color: #141c24;
   width: 100%;
   cursor: crosshair;
 }
@@ -604,17 +652,18 @@ header section .headerCont img {
   border: 2px solid #000;
   -webkit-box-shadow: #4141fa -10px 10px;
           box-shadow: #4141fa -10px 10px;
-  width: 47%;
+  width: 60%;
   padding: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   -webkit-animation: fadeInRight;
           animation: fadeInRight;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  position: relative;
 }
 
 .projectCont div h4 {
-  font: 300 2.2rem "Noto Sans JP", sans-serif;
+  font: 700 2.2rem "Noto Sans JP", sans-serif;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
@@ -624,8 +673,29 @@ header section .headerCont img {
 }
 
 .projectCont div p {
-  font: 100 1.8rem "Noto Sans JP", sans-serif;
-  width: 70%;
+  font: 300 1.8rem "Noto Sans JP", sans-serif;
+  width: 77%;
+}
+
+.projectCont div .mockUpTwo {
+  position: absolute;
+  width: 80%;
+  top: 70px;
+  left: 80%;
+}
+
+.projectCont div .mockUpFourA {
+  position: absolute;
+  width: 290px;
+  top: 40px;
+  left: 82%;
+}
+
+.projectCont div .mockUpFourB {
+  position: absolute;
+  width: 155px;
+  top: 101px;
+  left: 140%;
 }
 
 .projectCont .projects {
@@ -643,11 +713,43 @@ header section .headerCont img {
           animation: fadeInLeft;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  position: relative;
 }
 
-.contactCont.border .fuck {
-  font: 300 2.2rem "Noto Sans JP", sans-serif;
+.projectCont .projects .mockUpOneA {
+  position: absolute;
+  width: 160px;
+  top: 8px;
+  right: 122%;
+  z-index: 20;
+}
+
+.projectCont .projects .mockUpOneB {
+  position: absolute;
+  width: 81%;
+  top: 75px;
+  right: 80%;
+  z-index: 10;
+}
+
+.projectCont .projects .mockUpThree {
+  position: absolute;
+  width: 110%;
+  top: 45px;
+  right: 65%;
+}
+
+.contact .background {
+  height: 400px;
+}
+
+.contactCont.border .emailCont {
   text-align: center;
+}
+
+.contactCont.border .emailCont a p {
+  font: 700 2.2rem "Noto Sans JP", sans-serif;
+  margin: 40px 0 20px;
 }
 
 .contactCont.border .contactIcons {
@@ -664,6 +766,8 @@ header section .headerCont img {
 
 .contactCont.border .contactIcons i {
   font-size: 5rem;
+  color: #141c24;
+  text-shadow: #FFF 5px 5px;
   width: 100%;
   padding: 20px;
   cursor: pointer;
@@ -678,7 +782,7 @@ header section .headerCont img {
           animation-duration: 2s;
 }
 
-.form {
+.bottomDesign {
   height: 70px;
   border: 2px solid black;
   border-top: none;

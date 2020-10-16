@@ -1,12 +1,13 @@
 header {
     height: 85vh;
+    margin-top: 15px;
 
 // NAVIGATION
     .nav {
         // position: fixed;
         background-color: #FFF;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
 
         margin-bottom: 20px; 
@@ -22,18 +23,33 @@ header {
     ul {
         display: flex;
         justify-content: space-between;
-    
-        a {
-            font: 300 1.8rem $primaryFont;
-            margin: 0 10px;
-            padding: 0 10px;
-        }
-    
-        .contact {
 
-            a {
-                margin-right: 0;
-                padding-right: 0;
+        a {
+            display: inline-block;
+            font: 300 1.8rem $primaryFont;
+            letter-spacing: 2px;
+
+            position: relative;
+            margin: 0 10px;
+            padding: 0 10px 10px;
+
+            transition: all 0.4s ease;
+            
+            &:after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                background-color: $accentColor;
+                width: 0;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+            }
+
+            &:hover:after,
+            &:focus:after {
+                width: 100%;
             }
         }
     }
@@ -55,13 +71,13 @@ header {
 
             position: absolute;
             bottom: 20px;
-            left: 17.8%;
+            left: 17.3%;
         }
     }
 
     section {
         background-color: $secondaryBackgroundColor;
-
+        min-height: 509px;
         height: 85%;
 
         .border {
@@ -72,6 +88,24 @@ header {
         }
 
         .headerCont {
+            display: flex;
+
+            div {
+                width: 50%;
+
+                .profilePicTwo {
+                    width: 75%;
+                    filter: grayscale(100%);
+                    transition: .3s ease-in-out all;
+                    cursor: crosshair;
+    
+                    &:hover,
+                    &:focus {
+                        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+                        filter: grayscale(0);
+                    }
+                }    
+            }
 
             h1 {
                 font: 100 4rem $primaryFont;
@@ -104,19 +138,6 @@ header {
                     font-size: 6rem;
                 }
             }
-            
-            // .reflection {
-            //     color: $accentColor;
-
-            //     position: relative;
-            //     z-index: 1;
-            //     top: -63px;
-            //     left: 45px;
-            //     height: 0px;
-            //     letter-spacing: 11px;
-                
-            //     transform: rotateX(180deg) skewX(49deg) scaleY(-0.4);
-            // }
 
             p {
                 font: 300 4rem $primaryFont;
@@ -130,4 +151,3 @@ header {
         }
     }
 }
-
