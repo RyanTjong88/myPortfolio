@@ -117,15 +117,15 @@
 }
 
 // PROJECT SECTION
-.animateOne {
-    animation: fadeInLeft;
-    animation-duration: 2s;
-}
+// .animateOne {
+//     animation: fadeInLeft;
+//     animation-duration: 2s;
+// }
 
-.animateTwo {
-    animation: fadeInRight;
-    animation-duration: 2s;
-}
+// .animateTwo {
+//     animation: fadeInRight;
+//     animation-duration: 2s;
+// }
 
 .projectCont {
     display: flex;
@@ -159,15 +159,21 @@
             width: 50%;
         }
 
-        p  {
+        p {
             font: 300 1.8rem $primaryFont;
+            letter-spacing: 2px;
             width: 77%;
+            padding-bottom: 20px;
         }
 
         .links {
             font-weight: 700;
-            padding-top: 20px;
 
+            a:hover,
+            a:focus {
+                animation: flash;
+                animation-duration: 2s;
+            }
         }
 
         // MOCK UPS

@@ -329,9 +329,44 @@ header {
 }
 
 header .hamburger {
+  display: none;
   width: 40px;
   height: 40px;
   cursor: pointer;
+}
+
+header .hamburger .navTwo {
+  display: none;
+  position: relative;
+}
+
+header .hamburger .navTwo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid #000;
+  width: 150px;
+  padding-top: 10px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  z-index: 30;
+}
+
+header .hamburger .navTwo ul li {
+  background-color: #FFF;
+}
+
+header .hamburger .show {
+  display: block;
+}
+
+header .hamburger .hide {
+  display: none;
 }
 
 header .hamburger i {
@@ -444,6 +479,10 @@ header section .headerCont {
 header section .headerCont div {
   min-width: 250px;
   width: 50%;
+  -webkit-animation: fadeInLeft;
+          animation: fadeInLeft;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 header section .headerCont div .profilePicTwo {
@@ -645,20 +684,6 @@ header section .headerCont img {
   letter-spacing: 2px;
 }
 
-.animateOne {
-  -webkit-animation: fadeInLeft;
-          animation: fadeInLeft;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
-.animateTwo {
-  -webkit-animation: fadeInRight;
-          animation: fadeInRight;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-}
-
 .projectCont {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -704,12 +729,21 @@ header section .headerCont img {
 
 .projectCont div p {
   font: 300 1.8rem "Noto Sans JP", sans-serif;
+  letter-spacing: 2px;
   width: 77%;
+  padding-bottom: 20px;
 }
 
 .projectCont div .links {
   font-weight: 700;
-  padding-top: 20px;
+}
+
+.projectCont div .links a:hover,
+.projectCont div .links a:focus {
+  -webkit-animation: flash;
+          animation: flash;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .projectCont div .mockUpTwo {
@@ -860,13 +894,12 @@ footer img {
   width: 8%;
 }
 
-/* Portrait tablet and small desktops */
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-  nav {
+  .navOne {
     display: none;
   }
-  .hamburger {
+  header .hamburger {
     display: block;
   }
   .headerCont {
@@ -889,6 +922,10 @@ footer img {
     width: 100%;
   }
   .about .wrapperTwo .imgCont img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 97%;
     margin-top: 40px;
   }
   .mockUpOneB {
@@ -903,7 +940,12 @@ footer img {
   .projectCont div p,
   .projectCont .projects h4,
   .projectCont .projects p {
+    font-size: 1.6rem;
     width: 100%;
+  }
+  .projectCont div .links,
+  .projectCont .projects .links {
+    text-align: center;
   }
   .projectCont div .mockUpOneA,
   .projectCont div .mockUpTwo,
@@ -917,6 +959,13 @@ footer img {
     width: 100%;
     margin-top: 20px;
   }
+  .projectCont div .mockUpThree,
+  .projectCont .projects .mockUpThree {
+    width: 138%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
   .projectCont div .mockUpOneA,
   .projectCont div .mockUpFour,
   .projectCont .projects .mockUpOneA,
@@ -926,6 +975,11 @@ footer img {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+  .projectCont .projects {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
 
@@ -965,17 +1019,21 @@ footer img {
   .skills .icons .iconCont li p {
     font-size: 1.3rem;
   }
-  .contactCont.border .emailCont a p {
-    font-size: 1.8rem;
-  }
-  .contactCont.border .contactIcons i {
-    font-size: 4rem;
+  .projectCont h3 {
+    margin-bottom: 50px;
   }
   .projectCont div .mockUpOneA,
   .projectCont div .mockUpFour,
   .projectCont .projects .mockUpOneA,
   .projectCont .projects .mockUpFour {
     width: 100%;
+  }
+  .contactCont.border .emailCont a p {
+    font-size: 1.8rem;
+  }
+  .contactCont.border .contactIcons i {
+    font-size: 4rem;
+    padding: 5px;
   }
   footer p {
     font-size: 1.8rem;

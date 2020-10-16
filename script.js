@@ -30,11 +30,49 @@ portfolio.scroll = () => {
     });
 }
 
-// portfolio.hamburger = () => {
-//     $(".hamburger").click(function() {
+portfolio.scrollHam = () => {
+    // HAMBURGER
+    $("#one").click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $("#about").offset().top
+        }, 1500);
+    });
 
-//     })
-// }
+    $("#two").click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $("#skillsSec").offset().top
+        }, 2000);
+    });
+
+    $("#three").click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $("#portfolioSec").offset().top
+        }, 2500);
+    });
+
+    $("#four").click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $("#contactSec").offset().top
+        }, 4000);
+    });
+}
+
+portfolio.hamburger = () => {
+    $(".hamburger").on('click', function() {
+        $('.navTwo').addClass('show');
+    })
+}
+
+portfolio.hamburgerClose = () => {
+    $("li").on('click', function() {
+        $('.navTwo').addClass('hide');
+
+    })
+}
 
 // portfolio.animate = () => {
 //     $(window).scroll(function() {
@@ -51,7 +89,9 @@ portfolio.scroll = () => {
 
 portfolio.init = () => {
     portfolio.scroll();
-//     portfolio.animate();
+    portfolio.scrollHam();
+    portfolio.hamburger();
+    portfolio.hamburgerClose();
 }
 
 $(document).ready(function() {
