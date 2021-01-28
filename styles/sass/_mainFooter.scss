@@ -25,6 +25,15 @@
                 letter-spacing: 1px;
                 padding-bottom: 10px;
             }
+
+            .resume {
+                font: 300 1.8rem $primaryFont;
+                text-align: center;
+                background-color: $buttonColor;
+                color: #FFF;
+                width: 60%;
+                padding: 10px 20px;
+            }
         }
     
         .imgCont {
@@ -32,6 +41,7 @@
             width: 35%;
     
             img {
+                border: 2px solid #000;
                 box-shadow: none;
                 
                 filter: grayscale(100%);
@@ -40,7 +50,7 @@
     
                 &:hover,
                 &:focus {
-                    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+                    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
                     filter: grayscale(0);
                 }
             }
@@ -116,17 +126,6 @@
     }
 }
 
-// PROJECT SECTION
-// .animateOne {
-//     animation: fadeInLeft;
-//     animation-duration: 2s;
-// }
-
-// .animateTwo {
-//     animation: fadeInRight;
-//     animation-duration: 2s;
-// }
-
 .projectCont {
     display: flex;
     flex-direction: column;
@@ -141,11 +140,11 @@
         display: flex;
         flex-direction: column;
         border: 2px solid #000;
-        box-shadow: $accentColor -10px 10px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px 10px;
 
         width: 60%;
         padding: 30px;
-        margin-bottom: 200px;
+        margin-bottom: 100px;
 
         position: relative;
 
@@ -156,7 +155,7 @@
         }
 
         img {
-            width: 50%;
+            width: 25%;
         }
 
         p {
@@ -164,6 +163,15 @@
             letter-spacing: 2px;
             width: 77%;
             padding-bottom: 20px;
+        }
+
+        button {
+            border: 2px solid #000;
+            margin-bottom: 5px;
+
+            a {
+                text-transform: uppercase;
+            }
         }
 
         .links {
@@ -197,7 +205,6 @@
         display: flex;
         align-self: flex-end;
         align-items: flex-end;
-        box-shadow: $accentColor 10px 10px;
 
         position: relative;
 
@@ -302,7 +309,7 @@ footer {
     margin: 50px 0;
 
     p {
-        font: 300 3rem $primaryFont;
+        font: 300 2rem $primaryFont;
         position: relative;
         z-index: 10;
 
@@ -310,17 +317,17 @@ footer {
             content: '';
             background-color: $heading;
             opacity: .3;
-            width: 36%;
+            width: 16%;
             height: 50%;
             position: absolute;
             bottom: 44%;
-            left: 32%;
+            left: 41.8%;
             z-index: -10;
         }
     }
 
     img {
-        min-width: 100px;
-        width: 8%;
+        min-width: 80px;
+        width: 3%;
     }
 }

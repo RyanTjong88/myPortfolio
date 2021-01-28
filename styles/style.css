@@ -322,6 +322,18 @@ h3:hover, h3:focus {
   cursor: crosshair;
 }
 
+button {
+  background-color: #a3d1ff;
+  width: 150px;
+  padding: 10px 20px;
+  -webkit-transition: .3s ease-in-out all;
+  transition: .3s ease-in-out all;
+}
+
+.paired {
+  font-weight: 700;
+}
+
 header {
   min-height: 670px;
   height: 85vh;
@@ -486,6 +498,7 @@ header section .headerCont div {
 }
 
 header section .headerCont div .profilePicTwo {
+  border: 2px solid #000;
   width: 75%;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -495,21 +508,34 @@ header section .headerCont div .profilePicTwo {
 }
 
 header section .headerCont div .profilePicTwo:hover, header section .headerCont div .profilePicTwo:focus {
-  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
 
-header section .headerCont h1 {
+header section .headerCont .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header section .headerCont .name h1 {
   font: 100 4rem "Noto Sans JP", sans-serif;
 }
 
-header section .headerCont h1 span {
+header section .headerCont .name h1 span {
   font-weight: 700;
 }
 
-header section .headerCont h2 {
+header section .headerCont .name h2 {
   color: #000;
   font: 700 8rem "Noto Sans JP", sans-serif;
   letter-spacing: 2px;
@@ -517,7 +543,7 @@ header section .headerCont h2 {
   z-index: 100;
 }
 
-header section .headerCont h2::before {
+header section .headerCont .name h2::before {
   content: '';
   background-color: #FFF;
   width: 60%;
@@ -529,18 +555,18 @@ header section .headerCont h2::before {
   z-index: -10;
 }
 
-header section .headerCont h2 span {
+header section .headerCont .name h2 span {
   font-size: 6rem;
 }
 
-header section .headerCont p {
+header section .headerCont .name p {
   font: 300 4rem "Noto Sans JP", sans-serif;
   letter-spacing: 2px;
 }
 
-header section .headerCont img {
+header section .headerCont .name img {
   background-color: none;
-  width: 15%;
+  width: 35%;
 }
 
 .about {
@@ -584,12 +610,22 @@ header section .headerCont img {
   padding-bottom: 10px;
 }
 
+.about .wrapperTwo div .resume {
+  font: 300 1.8rem "Noto Sans JP", sans-serif;
+  text-align: center;
+  background-color: #0000E0;
+  color: #FFF;
+  width: 60%;
+  padding: 10px 20px;
+}
+
 .about .wrapperTwo .imgCont {
   min-width: 270px;
   width: 35%;
 }
 
 .about .wrapperTwo .imgCont img {
+  border: 2px solid #000;
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-filter: grayscale(100%);
@@ -600,8 +636,8 @@ header section .headerCont img {
 }
 
 .about .wrapperTwo .imgCont img:hover, .about .wrapperTwo .imgCont img:focus {
-  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
@@ -709,11 +745,11 @@ header section .headerCont img {
       -ms-flex-direction: column;
           flex-direction: column;
   border: 2px solid #000;
-  -webkit-box-shadow: #4141fa -10px 10px;
-          box-shadow: #4141fa -10px 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px 10px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px 10px;
   width: 60%;
   padding: 30px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   position: relative;
 }
 
@@ -724,7 +760,7 @@ header section .headerCont img {
 }
 
 .projectCont div img {
-  width: 50%;
+  width: 25%;
 }
 
 .projectCont div p {
@@ -732,6 +768,15 @@ header section .headerCont img {
   letter-spacing: 2px;
   width: 77%;
   padding-bottom: 20px;
+}
+
+.projectCont div button {
+  border: 2px solid #000;
+  margin-bottom: 5px;
+}
+
+.projectCont div button a {
+  text-transform: uppercase;
 }
 
 .projectCont div .links {
@@ -769,8 +814,6 @@ header section .headerCont img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-box-shadow: #4141fa 10px 10px;
-          box-shadow: #4141fa 10px 10px;
   position: relative;
   -webkit-animation: fadeInLeft;
           animation: fadeInLeft;
@@ -872,7 +915,7 @@ footer {
 }
 
 footer p {
-  font: 300 3rem "Noto Sans JP", sans-serif;
+  font: 300 2rem "Noto Sans JP", sans-serif;
   position: relative;
   z-index: 10;
 }
@@ -881,17 +924,17 @@ footer p::before {
   content: '';
   background-color: #6cb5ff;
   opacity: .3;
-  width: 36%;
+  width: 16%;
   height: 50%;
   position: absolute;
   bottom: 44%;
-  left: 32%;
+  left: 41.8%;
   z-index: -10;
 }
 
 footer img {
-  min-width: 100px;
-  width: 8%;
+  min-width: 80px;
+  width: 3%;
 }
 
 /* Landscape phone to portrait tablet */
@@ -984,15 +1027,23 @@ footer img {
 }
 
 @media (max-width: 640px) {
-  header section .headerCont h1,
-  header section .headerCont p {
+  header section .headerCont .name h1,
+  header section .headerCont .name p {
     font-size: 3rem;
   }
-  header section .headerCont h2 {
+  header section .headerCont .name h2 {
     font-size: 4.2rem;
   }
-  header section .headerCont h2 span {
+  header section .headerCont .name h2 span {
     font-size: 3.2rem;
+  }
+  header section .headerCont .name img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .about .wrapperTwo div .resume {
+    width: 100%;
   }
   .skills .icons .iconCont li i {
     font-size: 5rem;

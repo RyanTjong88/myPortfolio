@@ -2,12 +2,12 @@
 
 //COLORS
 // $bodySecondaryBackgroundColor: black;
-$secondaryBackgroundColor:  rgb(163, 209, 255);
+$secondaryBackgroundColor:  #a3d1ff;
 $heading: #6cb5ff;
 $accentColor: #4141fa;
 $fontColor: #141c24;
-// $buttonColor: #0000E0;
-// $buttonHoverColor: #1e90ff;
+$buttonColor: #0000E0;
+$buttonHoverColor: #1e90ff;
 $footerColor:  #6cb5ff;
 
 //FONTS
@@ -101,4 +101,15 @@ h3 {
     &:focus {
         cursor: crosshair;
     }
+}
+
+button {
+    background-color: $secondaryBackgroundColor;
+    width: 150px;
+    padding: 10px 20px;
+    transition: .3s ease-in-out all;
+}
+
+.paired {
+    font-weight: 700;
 }

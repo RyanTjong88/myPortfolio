@@ -89,7 +89,7 @@
 @media (max-width: 640px) {
 
     // HEADER
-    header section .headerCont {
+    header section .headerCont .name {
 
         h1,
         p {
@@ -103,6 +103,16 @@
                 font-size: 3.2rem;
             }
         }
+
+        img {
+            align-self: center;
+        }
+    }
+
+    // RESUME
+
+    .about .wrapperTwo div .resume {
+        width: 100%;
     }
 
     // SKILlS ICONS
