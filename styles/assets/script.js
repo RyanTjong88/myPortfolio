@@ -67,19 +67,6 @@ portfolio.hamburger = () => {
     })
 }
 
-// portfolio.animate = () => {
-//     $(window).scroll(function() {
-//         if ($(this).scrollTop()>10000)
-//          {
-//             $('.projects').show(2000);
-//          }
-//         else
-//          {
-//           $('.projects').show(2000);
-//          }
-//      });
-// }
-
 portfolio.init = () => {
     portfolio.scroll();
     portfolio.scrollHam();

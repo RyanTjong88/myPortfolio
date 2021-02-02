@@ -67,6 +67,43 @@ portfolio.hamburger = () => {
     })
 }
 
+// FADEIN EFFECT
+function debounce(func, wait = 20, immediate = true) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+  const fadeInContents = document.querySelectorAll('.slide-in');
+
+  function checkSlide() {
+    fadeInContents.forEach(fadeInContent => {
+        // half way through the image
+        const slideInAt = (window.scrollY + window.innerHeight) - fadeInContent.clientHeight / 3;
+        console.log(fadeInContent.clientHeight);
+      // bottom of the image
+      const imageBottom = fadeInContent.offsetTop + fadeInContent.clientHeight;
+      const isHalfShown = slideInAt > fadeInContent.offsetTop;
+      const isNotScrolledPast = window.scrollY < imageBottom;
+      if (isHalfShown && isNotScrolledPast) {
+        fadeInContent.classList.add('active');
+      } else {
+        fadeInContent.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', debounce(checkSlide));
+
 portfolio.init = () => {
     portfolio.scroll();
     portfolio.scrollHam();

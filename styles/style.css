@@ -815,10 +815,6 @@ header section .headerCont .name img {
       -ms-flex-align: end;
           align-items: flex-end;
   position: relative;
-  -webkit-animation: fadeInLeft;
-          animation: fadeInLeft;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
 }
 
 .projectCont .projects .links {
@@ -1093,4 +1089,36 @@ footer img {
     width: 70%;
     left: 15%;
   }
+}
+
+.align-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.slide-in {
+  opacity: 0;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+.align-left.slide-in {
+  -webkit-transform: translateX(-30%) scale(0.95);
+          transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  -webkit-transform: translateX(30%) scale(0.95);
+          transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  -webkit-transform: translateX(0%) scale(1);
+          transform: translateX(0%) scale(1);
 }
