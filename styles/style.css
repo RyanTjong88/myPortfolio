@@ -791,18 +791,24 @@ header section .headerCont .name img {
           animation-duration: 2s;
 }
 
-.projectCont div .mockUpTwo {
+.projectCont div .mockUpTwo,
+.projectCont div .mockUpFour {
+  background-color: black;
   position: absolute;
+  min-height: 310px;
   width: 80%;
-  top: 70px;
-  left: 80%;
+  bottom: -30%;
+  left: 90%;
+  padding: 0;
 }
 
-.projectCont div .mockUpFour {
-  position: absolute;
-  width: 290px;
-  top: 40px;
-  left: 90%;
+.projectCont div .mockUpTwo .video,
+.projectCont div .mockUpFour .video {
+  width: 100%;
+  height: 310px;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .projectCont .projects {
@@ -821,27 +827,26 @@ header section .headerCont .name img {
   text-align: end;
 }
 
-.projectCont .projects .mockUpOneA {
+.projectCont .projects .mockUpOne,
+.projectCont .projects .mockUpThree,
+.projectCont .projects .mockUpFive {
+  background-color: black;
   position: absolute;
-  width: 160px;
-  top: 8px;
-  right: 122%;
-  z-index: 20;
+  min-height: 310px;
+  width: 80%;
+  bottom: -30%;
+  right: 90%;
+  padding: 0;
 }
 
-.projectCont .projects .mockUpOneB {
-  position: absolute;
-  width: 81%;
-  top: 75px;
-  right: 80%;
-  z-index: 10;
-}
-
-.projectCont .projects .mockUpThree {
-  position: absolute;
-  width: 110%;
-  top: 45px;
-  right: 65%;
+.projectCont .projects .mockUpOne .video,
+.projectCont .projects .mockUpThree .video,
+.projectCont .projects .mockUpFive .video {
+  width: 100%;
+  height: 310px;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .contact .background {
@@ -933,6 +938,16 @@ footer img {
   width: 3%;
 }
 
+@media (max-width: 970px) {
+  .projectCont .projects .mockUpOne,
+  .projectCont div .mockUpTwo,
+  .projectCont .projects .mockUpThree,
+  .projectCont div .mockUpFour,
+  .projectCont .projects .mockUpFive {
+    height: 50%;
+  }
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   .navOne {
@@ -967,13 +982,10 @@ footer img {
     width: 97%;
     margin-top: 40px;
   }
-  .mockUpOneB {
-    display: none;
-  }
   .projectCont div,
   .projectCont .projects {
     width: 100%;
-    margin-bottom: 100px;
+    margin: 0 0 100px;
   }
   .projectCont div h4,
   .projectCont div p,
@@ -986,34 +998,20 @@ footer img {
   .projectCont .projects .links {
     text-align: center;
   }
-  .projectCont div .mockUpOneA,
+  .projectCont div .mockUpOne,
   .projectCont div .mockUpTwo,
   .projectCont div .mockUpThree,
   .projectCont div .mockUpFour,
-  .projectCont .projects .mockUpOneA,
+  .projectCont div .mockUpFive,
+  .projectCont .projects .mockUpOne,
   .projectCont .projects .mockUpTwo,
   .projectCont .projects .mockUpThree,
-  .projectCont .projects .mockUpFour {
+  .projectCont .projects .mockUpFour,
+  .projectCont .projects .mockUpFive {
     position: initial;
+    height: 250px;
     width: 100%;
-    margin-top: 20px;
-  }
-  .projectCont div .mockUpThree,
-  .projectCont .projects .mockUpThree {
-    width: 138%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  .projectCont div .mockUpOneA,
-  .projectCont div .mockUpFour,
-  .projectCont .projects .mockUpOneA,
-  .projectCont .projects .mockUpFour {
-    position: initial;
-    width: 50%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    margin: 0;
   }
   .projectCont .projects {
     -webkit-box-align: start;
@@ -1068,12 +1066,6 @@ footer img {
   }
   .projectCont h3 {
     margin-bottom: 50px;
-  }
-  .projectCont div .mockUpOneA,
-  .projectCont div .mockUpFour,
-  .projectCont .projects .mockUpOneA,
-  .projectCont .projects .mockUpFour {
-    width: 100%;
   }
   .contactCont.border .emailCont a p {
     font-size: 1.8rem;

@@ -184,20 +184,23 @@
             }
         }
 
-        // MOCK UPS
-        .mockUpTwo {
-            position: absolute;
-            width: 80%;
-            top: 70px;
-            left: 80%;
-        }
-
-        
+        .mockUpTwo,
         .mockUpFour {
+            background-color: black;
             position: absolute;
-            width: 290px;
-            top: 40px;
-            left: 90%
+            min-height: 310px;
+            width: 80%;
+            bottom: -30%;
+            left: 90%;
+            padding: 0;
+
+            .video {
+                width: 100%; 
+                height: 310px; 
+                border: none; 
+                padding: 0;
+                margin: 0;
+            }
         }
     }
 
@@ -212,30 +215,25 @@
             text-align: end;
         }
 
-        // MOCK UPS
-        .mockUpOneA {
+        .mockUpOne,
+        .mockUpThree,
+        .mockUpFive {
+            background-color: black;
             position: absolute;
-            width: 160px;
-            top: 8px;
-            right: 122%;
-            z-index: 20;
+            min-height: 310px;
+            width: 80%;
+            bottom: -30%;
+            right: 90%;
+            padding: 0;
+
+            .video {
+                width: 100%; 
+                height: 310px; 
+                border: none; 
+                padding: 0;
+                margin: 0;
+            }
         }
-
-        .mockUpOneB {
-            position: absolute;
-            width: 81%;
-            top: 75px;
-            right: 80%;
-            z-index: 10;
-        }
-
-
-        .mockUpThree {
-            position: absolute;
-            width: 110%;
-            top: 45px;
-            right: 65%;
-        }   
     }
 }
 
@@ -296,7 +294,6 @@
     border: 2px solid black;
     border-top: none;
 }
-
 
 // FOOTER
 
