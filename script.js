@@ -89,7 +89,6 @@ function debounce(func, wait = 20, immediate = true) {
     fadeInContents.forEach(fadeInContent => {
         // half way through the image
         const slideInAt = (window.scrollY + window.innerHeight) - fadeInContent.clientHeight / 3;
-        console.log(fadeInContent.clientHeight);
       // bottom of the image
       const imageBottom = fadeInContent.offsetTop + fadeInContent.clientHeight;
       const isHalfShown = slideInAt > fadeInContent.offsetTop;

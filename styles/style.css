@@ -615,7 +615,7 @@ header section .headerCont .name img {
   text-align: center;
   background-color: #0000E0;
   color: #FFF;
-  width: 60%;
+  width: 65%;
   padding: 10px 20px;
 }
 
@@ -946,6 +946,26 @@ footer img {
   .projectCont .projects .mockUpFive {
     height: 50%;
   }
+  .projectCont h3 {
+    width: 75%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 870px) {
+  .about .wrapperTwo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about .wrapperTwo div {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .wrapperTwo .imgCont {
+    margin-top: 15px;
+  }
 }
 
 /* Landscape phone to portrait tablet */
@@ -965,7 +985,7 @@ footer img {
     text-align: center;
   }
   .about {
-    padding: 100px 0 100px;
+    padding: 30px 0 30px;
   }
   .about .wrapperTwo {
     -webkit-box-pack: center;
@@ -985,7 +1005,7 @@ footer img {
   .projectCont div,
   .projectCont .projects {
     width: 100%;
-    margin: 0 0 100px;
+    margin: 0 0 20px;
   }
   .projectCont div h4,
   .projectCont div p,
@@ -1039,6 +1059,9 @@ footer img {
   .about .wrapperTwo div .resume {
     width: 100%;
   }
+  .skills .background {
+    height: 200px;
+  }
   .skills .icons .iconCont li i {
     font-size: 5rem;
   }
@@ -1052,9 +1075,6 @@ footer img {
   .about .wrapperTwo div {
     width: 100%;
   }
-  .skills .background {
-    height: 200px;
-  }
   .skills .icons .iconCont {
     padding-bottom: 0;
   }
@@ -1065,7 +1085,7 @@ footer img {
     font-size: 1.3rem;
   }
   .projectCont h3 {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   .contactCont.border .emailCont a p {
     font-size: 1.8rem;
